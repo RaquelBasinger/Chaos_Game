@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <cstdlib> 
 
 // Make code easier to type with "using namespace"
 using namespace sf;
@@ -61,7 +62,7 @@ int main()
                 		}
             		}
         	}
-        if (Keyboard::isKeyPressed(Keyboard::Escape))
+        	if (Keyboard::isKeyPressed(Keyboard::Escape))
 		{
 			window.close();
 		}
@@ -71,27 +72,41 @@ int main()
 		****************************************
 		*/
 
-        if(points.size() > 0)
-        {
-            ///generate more point(s)
-            ///select random vertex
-            ///calculate midpoint between random vertex and the last point in the vector
-            ///push back the newly generated coord.
-        }
+        	if(points.size() > 0)
+        	{
+            		///generate more point(s)
+            		///select random vertex
+            		///calculate midpoint between random vertex and the last point in the vector
+            		///push back the newly generated coord.
+			int randomVertex;
+			for(i = 0; i < 100; i++){
+				randomVertex = rand() % 3;
+				if(randomVertex == 0){
+					
+				}
+				if(randomVertex == 0){
+
+				}
+				if(randomVertex == 0){
+
+				}
+			}
+			
+        	}
 
         /*
 		****************************************
 		Draw
 		****************************************
 		*/
-        window.clear();
-        for(int i = 0; i < vertices.size(); i++)
-        {
-            RectangleShape rect(Vector2f(10,10));
-            rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
-            rect.setFillColor(Color::Blue);
-            window.draw(rect);
-        }
-        window.display();
-    }
+        	window.clear();
+        	for(int i = 0; i < vertices.size(); i++)
+        	{
+            		RectangleShape rect(Vector2f(10,10));
+            		rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
+            		rect.setFillColor(Color::Blue);
+            		window.draw(rect);
+        	}
+        	window.display();
+    	}
 }
