@@ -79,19 +79,10 @@ int main()
             		///calculate midpoint between random vertex and the last point in the vector
             		///push back the newly generated coord.
 			int randomVertex;
-			for(i = 0; i < 100; i++){
-				randomVertex = rand() % 3;
-				if(randomVertex == 0){
-					
-				}
-				if(randomVertex == 0){
-
-				}
-				if(randomVertex == 0){
-
-				}
-			}
-			
+			randomVertex = rand() % 3;
+			float x1 = (vertices[randomVertex].x + points[(points.size() - 1)].x)/2;
+			float y1 = (vertices[randomVertex].y + points[(points.size() - 1)].y)/2;
+			vertices.push_back(x1,y1);		
         	}
 
         /*
