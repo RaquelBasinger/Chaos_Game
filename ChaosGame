@@ -17,6 +17,11 @@ int main()
 	text.setFont(font);
 	text.setCharacterSize(12);
 	text.setFillColor(sf::Color::Red);
+	text.setPosition({0,0});
+	if (!font.loadFromFile("arial.ttf"))
+	{
+    		cout << "Error Loading Font!" << endl;
+	}
 	// Create a video mode object
 	VideoMode vm(1920, 1080);
 	// Create and open a window for the game
